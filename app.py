@@ -33,7 +33,7 @@
 # user_name = "Not taking username's at the moment"
 # print(user_name)
 
-# ## Control Flows 
+# ## Control Flows  ctrl + shift + I 
 # ## if , elif run if condition is true , if not it then becomes false and runs the else
 # ## else it runs nothing if the else block is not provided 
 # # if condition:
@@ -61,12 +61,72 @@
 # # event entry program - is above 18 -> gain admission and receive a complimentary drink 
 # # - if user is btw range 16 - 18 -> gain admission and receive a juice 
 # # - if user is below 16 -> gain admissions 
-age = input("Enter Your Age ")
-attendee_name = input("Enter your name ")
-if int(age) > 18:
-    print(f"{attendee_name} can enter and receive a drink!!")
-elif int(age) >= 16 and int(age) <= 18:
-    print(f"{attendee_name} can enter but recieves a juice pack!")
-elif int(age) < 16:
-    print(f"{attendee_name} is too young cannot enter!!")
+# age = input("Enter Your Age ")
+# attendee_name = input("Enter your name ")
+# if int(age) > 18:
+#     print(f"{attendee_name} can enter and receive a drink!!")
+# elif int(age) >= 16 and int(age) <= 18:
+#     print(f"{attendee_name} can enter but recieves a juice pack!")
+# elif int(age) < 16:
+#     print(f"{attendee_name} is too young cannot enter!!")
+    
+    
+a =  10 
+b = a + 20
 
+f_name = "Joseph"
+l_name = "mbugua"
+print(f_name + "" + l_name)
+
+c = 7
+d = 3
+e = c * d
+print(e)
+d *= 10 # d = d * 10
+print(d)
+d %= 3 # d = d % 3 
+print(d)
+
+x = 10 
+y = 6
+print(x == y) # false
+print(x != y) # true
+print(x <= y) # false
+print(10 < x and x > 1) # false 
+print(10 < x or x > 1) # true 
+print(not(10 < x and x > 1))  # result is false - true 
+print(not(10 < x or x > 1)) # result is true - false 
+
+x = ["jeep","suv"]
+y = ["jeep", "suv"]
+z = x 
+
+print(x is z) # true 
+print(x is y) # false 
+
+print("jeep" in x )
+print("jeep" not in x)
+name = "Joseph Mbugua"
+print("M" in name) # true
+
+x = 6 # 0110 
+y = 3 # 0011  - 0111 - 7 
+print(6 | 3)
+
+# strings (str)
+# use for text manipulation 
+example_string= "Python" # size/len = 6  # index position of each letter starts from 0
+# common operations 
+print(len(example_string)) # 6 
+# convert to uppercase
+print(example_string.upper())
+print(example_string.lower()) # lower case 
+# substring : slice a string and return the portion selected  : hon
+print(example_string[3:6])
+print(example_string[0:3]) # pyt
+# join : create a string by joining separate letters in a list datatype 
+list_letters = ["a","b","c"]
+# "abc" 
+# .join 
+joined_statement  = "".join(list_letters)
+print(joined_statement)
