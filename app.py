@@ -130,3 +130,124 @@ list_letters = ["a","b","c"]
 # .join 
 joined_statement  = "".join(list_letters)
 print(joined_statement)
+
+# isinstance()
+x = 100
+print(isinstance(x, int)) # true , or false 
+# collections / sequences : grouping of data - immutable , mutable 
+# lists , tuples , set and dictionary 
+# lists - List items are ordered , changeable , and allow duplicate values 
+# ordering in lists is referenced as index positioning - start 0 
+# size : number of items inside the list - len() 3 
+# index position in collections = size - 1 
+# access of items in the list is via index positioning 
+# changeable : ability to be able add(append) remove , update 
+# list items can be of any data type
+list_fruits = ["apple", "banana", "orange", 7, True, "apple", "orange"]
+print(list_fruits)
+# operations 
+print(len(list_fruits))  #len 
+# access items - via the index position
+print(list_fruits[4]) # true
+print(list_fruits[0]) # apple 
+print(list_fruits[-1]) # access last item in a list 
+print(list_fruits[2:5]) # range indexing  : items 3 - 5
+# append allows adding of elements in the list 
+list_fruits.append("Pear")
+print(list_fruits)
+# remove items from the list 
+list_fruits.pop(0)
+print(list_fruits)
+# update 
+list_fruits[0] = "Cherry"
+print(list_fruits)
+
+# tuples - immutables sequences , they cannot be changed , items are of the same data type / mixed data types
+coordinates = (5,10,15,5,15)
+one_item_tuple = (1,)
+# operations 
+print(len(coordinates))
+# ordered : index positioning 
+print(coordinates[0]) # 5 
+print(coordinates[-1]) # 15 
+print(coordinates[0:4])
+# update values in a tuple (type casting) ( remove , update ) tuple -> list -> tuple
+changed_coordinates = list(coordinates)
+print(changed_coordinates) 
+changed_coordinates.pop(1)  # remove ("element")
+changed_coordinates[1] = 9.05
+coordinates = tuple(changed_coordinates)
+print(coordinates)
+# delete a tuple completely 
+del one_item_tuple
+
+# sets - unordered , unchangeable, unindexed , on print it only prints unique items i.e. remove duplicates 
+# sets see false as 0
+set_fruits = {"apple","banana","pear","apple",False,0}
+print(set_fruits)
+print(len(set_fruits)) # unique items
+# access items in a set : reference for...in loop
+# loops : allows you to repeat tasks 
+for fruit in set_fruits:
+    print(fruit)
+    
+# sets cannot change but will allow additions : add() 
+set_fruits.add("Orange")
+print(set_fruits)
+# sets will also allow addition of any collection : update()
+set_fruits.update(list_fruits)
+print(set_fruits)    
+# remove items 
+set_fruits.remove(7)
+print(set_fruits)
+set_fruits.update(list_fruits)
+print(set_fruits)
+set_fruits.discard('banana')
+print(set_fruits)
+
+# dictionary  - storage of data values in key and value pairs 
+# ordered , changeables , won't allow duplicates keys
+my_vehicle = {
+    "brand" : "Toyota","model" : "Corolla","year"  : 2007,"engineNo" : "EF6790","ntsaReg" : False
+}
+print(my_vehicle)
+# access items from a dictionary using the key 
+print(my_vehicle["brand"])
+print(my_vehicle.get("engineNo"))
+print(len(my_vehicle))
+print(my_vehicle.keys()) # list all the keys for the dictionary tagged 
+print(my_vehicle.values()) # list all the values in the dictionary 
+print(my_vehicle.items()) # list all key:value pairs for the dictionary 
+print("brand" in my_vehicle) # true  : check if a key exists in a dictionary 
+# change value that a key points to 
+my_vehicle["model"] = "X78"
+my_vehicle["year"] = 2008
+print(my_vehicle)
+# update a dict. = adding a new key:value pair 
+my_vehicle["reg_name"] = "Joseph Mbugua"
+my_vehicle.update({"chassis_no" : 89483948})
+print(my_vehicle)
+# remove items from the dict .
+print(my_vehicle.pop("reg_name"))
+print(my_vehicle)
+del my_vehicle["ntsaReg"]
+print(my_vehicle)
+
+### nested collections 
+x = [ ["apple","pear"] , "Joseph" , "Jane" , (1,90.09) , False, {"fullname" : "J Mbugua","Staff_id" : 49839} ]
+# access the staff_id and print it 
+print(x[5]["Staff_id"]) # 49839
+
+myFamily = {
+    "father" : {
+        "name" : "John",
+        "year" : 1985
+    }, 
+    "mother" : {
+        "name" : "Jane",
+        "year" : 1990
+    }
+}
+mother_name = myFamily["mother"]["name"]
+print(mother_name)
+print(f"The mother's name is {mother_name}")
