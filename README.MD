@@ -64,3 +64,18 @@ In built operations/methods that enable us to manipulate data
 Each Data type has its own variation for the built operations 
 
 Numbers -> type casting , arithmetics operations
+
+
+### FUNCTIONS and Single Responsibility Pattern : SRP 
+Each function , class or module should have only one reason to change 
+one function = one purpose 
+### Why it matters 
+1. Modularity - each function will do one thing well
+2. Maintability - change one function without affecting the others 
+3. Reusability - reuse the single functions elsewhere within our codebase 
+4. Testability - each part can be unit-tested independetly 
+### summarize.py 
+Three core responsibilities 
+1. Input handling - reading the input from the terminal 
+2. Data processing - computing the stats (count, min, max , average etc..)
+3. Output formatting- printing and error reporting 
