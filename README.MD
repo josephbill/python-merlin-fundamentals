@@ -79,3 +79,51 @@ Three core responsibilities
 1. Input handling - reading the input from the terminal 
 2. Data processing - computing the stats (count, min, max , average etc..)
 3. Output formatting- printing and error reporting 
+
+### Modules :: this points to files/tools that have ready functions to enable executions of specifics task 
+
+- Introduce to scripts using import statement 
+
+
+### OOP : Object Oriented Programming 
+- this is organizing our code around objects -> 
+  Objects -> attributes : data 
+             methods :: actions , independent action  , actions that affect the data 
+
+    eCommerce System 
+     - users -> role, full_name, id, password , email ,  -> login() , register(), resetPassword() , updateProfile()
+     - products -> category, price , title , descriptions, -> add(), display() , updateProducts()
+     - payments -> amount, gateway, useridentity -> makePayment() , generateReports()
+
+## Building blocks of OOP 
+- Class : blueprint 
+- Object(single entity with attributes and methods) : instance of the class 
+
+Dog class -> attributes - > name  -> breed -> age 
+     objects      ->  different dogs created from the blueprint 
+
+
+Python treats everything like an object 
+
+## FOUR PILLARS OF OOP - a guide on desing thinking for outr oop approach 
+1. Encapsulation - bundle data and behaviour(methods) in one place (class) 
+- keep related things together
+- keeps data safe and ensures no mix up data / behaviour relative to the domain 
+2. Abstraction - hiding complex details and showing only the important stuff 
+- simple methods that hide complex process 
+3. Inheritance - allows once class to use atrributes and methods of another 
+-reuse code , make relationships between our classes more clear 
+4. Polymorphism - different objects can respond to the same method in different ways 
+
+
+## DOMAIN EXAMPLE : RETAIL SYSTEM 
+- Customers - data and methods sets that are required to represent this ddomain as code 
+- Products - data and methods sets that are required to represent this ddomain as code 
+- Orders  - data and methods sets that are required to represent this ddomain as code 
+- Payments - data and methods sets that are required to represent this ddomain as code 
+
+## Object relationships : The relationship to be established using objects in the system 
+## one to one relationship : object to object 
+## one to many relationship : object to multiple objects 
+## many to many relationship : association class set up : many objects to many objects 
+## 3 minutes break
